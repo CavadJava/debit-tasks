@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import ExpensiveCalculation from './components/ExpensiveCalculation.jsx'
+import OptimizeExpensive from './components/OptimizeExpensive.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <ExpensiveCalculation />
+      <OptimizeExpensive />
     </>
   )
 }
