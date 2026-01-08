@@ -46,15 +46,15 @@ function App() {
 
   return (
     <>
-      <div className='container'>
+      <div className='container' style={{maxWidth: "100%", textAlign: "center",backgroundColor: "black"}}>
         <h1>Todos</h1>
         {todos.length === 0 ? (
           <p>No todos yet!</p>
         ) : (
-          <div className='cards d-flex flex-row flex-wrap'>
+          <div className='cards d-flex flex-row flex-wrap justify-content-center align-items-center'>
             {todos.map((todo, index) => (
               <div key={index} className="card mb-2 me-2" style={{width: '250px',height: '200px'}}>
-                <div className="card-body" style={{textAlign:'center'}}>
+                <div className="card-body" style={{textAlign:'center',padding:'2px',border:'3px solid rgb(152, 250, 23)',borderRadius:'2px',backgroundColor: todo.completed ? 'rgb(206, 254, 253)' : 'rgb(248, 212, 212)'}}>
                   <p style={{display: 'none'}}>{todo.id}</p>
                   <p className="card-text">{todo.todo}</p>
                   <p className="card-text">Completed: {todo.completed ? 'Completed' : 'Not Completed'}</p>
@@ -85,7 +85,7 @@ function App() {
                       <td>{index}</td>
                       <td>{item.userId}</td>
                       <td>{item.count}</td>
-                      <td>{item.completed ? 'Completed' : 'Not Completed'}</td>
+                      <td>{item.completed ? 'Yes' : 'No'}</td>
                       <td><button className='btn btn-danger' onClick={handleRemove(item)}>Remove</button></td>
                     </tr>
                   )
