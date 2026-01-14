@@ -1,0 +1,31 @@
+.homeImg{
+    background-image: url('https://router-web-topic-7.vercel.app/assets/desktopcom-9da87c7f.jpg');
+    width: 100%;
+    height: 85vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.homeContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.homeContent button {
+    padding: 15px 60px;
+    font-size: 18px;
+    background-color: #8755ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.homeContent button:hover {
+    background-color: #5353E7;
+    padding: 18px 63px;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}   

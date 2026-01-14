@@ -1,7 +1,19 @@
+import { useNavigate } from 'react-router-dom'
+import Headers from '../components/header.jsx'
+import Footer from '../components/footer.jsx';
+import './home.css';
+
 export default function Home() {
+    const navigate = useNavigate();
     return (
-        <div className="">
-            <h1>Home Page</h1>
-        </div>
+        <>
+            <Headers/>
+                <div className="homeImg">
+                    <div className="homeContent">
+                        <button onClick={()=>navigate('/menu')}>Order</button>
+                    </div>
+                </div>
+            <Footer/>
+        </>
     )
 }

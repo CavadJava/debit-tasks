@@ -1,0 +1,12 @@
+.header-navs-list li button {
+    font-size: 18px;
+    margin-right: 20px;
+    background-color: #8755ff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.header-navs-list li button:hover {
+    color: #0ff;
+}

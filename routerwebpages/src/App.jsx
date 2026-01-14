@@ -1,26 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Headers from './components/header.jsx'
-import Footer from './components/Footer.jsx'
+import Home from './pages/home.jsx'
+import About from './pages/about/about.jsx'
+import Contact from './pages/contact/contact.jsx'
+import Menu from './pages/menu.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ProductDetail from './pages/product/ProductDetail.jsx'
+import { Suspense } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <Headers/>
       <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<h1>Home Page</h1>} />
-          <Route path="/about" element={<h1>About Page</h1>} />
-          <Route path="/contact" element={<h1>Contact Page</h1>} />
-          <Route path="/menu" element={<h1>Menu Page</h1>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu/:menuId" element={<ProductDetail />}  />
         </Routes>
+      </Suspense>
       </BrowserRouter>
-      <Footer/>
     </>
   )
 }

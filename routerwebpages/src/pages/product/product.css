@@ -1,0 +1,30 @@
+.product h1{
+    text-align: center;
+    margin-top: 20px;
+}
+.menu-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu-product {
+    background-color: rgb(147, 201, 255);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+.menu-product button {
+    background-color: rgb(83, 83, 253);
+    color: white;
+}
+
+.detail-image {
+    object-fit: 'cover';
+    width: 350px;
+    height: 200px;
+}
