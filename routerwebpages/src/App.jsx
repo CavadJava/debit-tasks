@@ -1,10 +1,11 @@
-import Home from './pages/home.jsx'
-import About from './pages/about/about.jsx'
-import Contact from './pages/contact/contact.jsx'
-import Menu from './pages/menu.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductDetail from './pages/product/ProductDetail.jsx'
-import { Suspense } from 'react'
+import { Suspense,lazy } from 'react'
+
+const Home = lazy(() => import('./pages/home.jsx'));
+const About = lazy(() => import('./pages/about/about.jsx'));
+const Contact = lazy(() => import('./pages/contact/contact.jsx'));
+const Menu = lazy(() => import('./pages/menu.jsx'));
+const ProductDetail = lazy(() => import('./pages/product/ProductDetail.jsx'));
 
 function App() {
 
