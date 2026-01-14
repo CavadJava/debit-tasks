@@ -18,8 +18,8 @@ export default function About() {
                         marginBottom: "24px" 
                     }} 
                 />
-                <Link to="/about/company">About Company</Link>
-                <Link to="/about/products">About Products</Link>
+                {/* <Link to="/about/company">About Company</Link> */}
+                {/* <Link to="/about/products">About Products</Link> */}
                 {/* <Routes>
                     <Route path="/about/company" element={<h2>About Company</h2>} />
                     <Route path="/about2/products" element={<h2>About Products</h2>} />
