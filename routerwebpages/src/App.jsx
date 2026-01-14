@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Suspense,lazy } from 'react'
 import { getProfile } from './services/auth.js';
 import { useFetchData } from './hooks/useFetchData.js';
@@ -42,6 +42,7 @@ function App() {
         </>
       }
           <Route path="/*" element={<NotFound/>} />
+          {/* <Route path="*" element={<Navigate to ={ data ? "/" : "/auth/login"} />} /> */}
         </Routes>
       </Suspense>
       </BrowserRouter>
